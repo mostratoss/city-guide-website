@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where to Stay in Athens</title>
+   <link rel="icon" type="image/png" href="icons/ath_logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stay-style.css">
+  	<!-- Εισαγωγή της γραμματοσειράς Montserrat από Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background-blur"></div>
+
+  <!-- Πλοήγηση -->
+  <nav class="navbar">
+        <div class="logo">
+  <img src="icons/logo.png" alt="Logo" class="logo-img">
+  Athens Tour
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="stay.html" class="active">Where to Stay</a></li>
+      <li><a href="nightlife.html">Nightlife</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+  </nav>
+
+  <!-- Εισαγωγή -->
+  <header class="hero">
+    <div class="hero-box fade-in">
+      <div class="hero-content">
+        <h1>Best Places to Stay in Athens</h1>
+        <p>Top-rated hotels and apartments near the center</p>
+        <a href="#stay-section" class="cta-button">Explore Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Κύρια ενότητα ξενοδοχείων -->
+  <section class="stay-section" id="stay-section">
+    <div id="stay-start"></div>
+	
+    <div class="stay-grid">
+
+      <!-- Φίλτρο τιμής -->
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">Όλα τα ξενοδοχεία</button>
+        <button class="filter-btn" data-filter="below">Κάτω από €100</button>
+        <button class="filter-btn" data-filter="above">Πάνω από €100</button>
+      </div>
+
+      <div class="stay" data-price="85">
+        <img src="photos_for_stay/plaka-hotel.jpg" alt="Plaka Hotel">
+        <div class="stay-info">
+          <h2>1. Plaka Hotel</h2>
+          <div><span class="rating">4.4</span> <a class="reviews" href="javascript:void(0);">(3123 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €85/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="340">
+        <img src="photos_for_stay/grande-bretagne.jpg" alt="Hotel Grande Bretagne">
+        <div class="stay-info">
+          <h2>2. Hotel Grande Bretagne</h2>
+          <div><span class="rating">4.5</span> <a class="reviews" href="javascript:void(0);">(3246 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €340/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="55">
+        <img src="photos_for_stay/airbnb-athens.jpg" alt="Cozy Airbnb Apartment">
+        <div class="stay-info">
+          <h2>3. Cozy Airbnb Apartment</h2>
+          <div><span class="rating">4.6</span> <a class="reviews" href="javascript:void(0);">(3369 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €55/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="65">
+        <img src="photos_for_stay/athens-central.jpg" alt="Athens Central Inn">
+        <div class="stay-info">
+          <h2>4. Athens Central Inn</h2>
+          <div><span class="rating">4.7</span> <a class="reviews" href="javascript:void(0);">(3492 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €65/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="180">
+        <img src="photos_for_stay/acropolis-suites.jpg" alt="Acropolis Luxury Suites">
+        <div class="stay-info">
+          <h2>5. Acropolis Luxury Suites</h2>
+          <div><span class="rating">4.8</span> <a class="reviews" href="javascript:void(0);">(3615 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €180/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="90">
+        <img src="photos_for_stay/koukaki-modern.jpg" alt="Modern Stay Koukaki">
+        <div class="stay-info">
+          <h2>6. Modern Stay Koukaki</h2>
+          <div><span class="rating">4.9</span> <a class="reviews" href="javascript:void(0);">(3738 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €90/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="110">
+        <img src="photos_for_stay/heritage-plaka.jpg" alt="Heritage Hotel Plaka">
+        <div class="stay-info">
+          <h2>7. Heritage Hotel Plaka</h2>
+          <div><span class="rating">4.10</span> <a class="reviews" href="javascript:void(0);">(3861 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €110/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="130">
+        <img src="photos_for_stay/syntagma-boutique.jpg" alt="Syntagma Boutique">
+        <div class="stay-info">
+          <h2>8. Syntagma Boutique</h2>
+          <div><span class="rating">4.11</span> <a class="reviews" href="javascript:void(0);">(3984 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €130/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="101">
+        <img src="photos_for_stay/athens-view.jpg" alt="Athens View Rooms">
+        <div class="stay-info">
+          <h2>9. Athens View Rooms</h2>
+          <div><span class="rating">4.12</span> <a class="reviews" href="javascript:void(0);">(4107 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €101/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+      <div class="stay" data-price="80">
+        <img src="photos_for_stay/city-vibes.jpg" alt="City Vibes Hotel">
+        <div class="stay-info">
+          <h2>10. City Vibes Hotel</h2>
+          <div><span class="rating">4.13</span> <a class="reviews" href="javascript:void(0);">(4230 reviews)</a> <span class="open-status">• Open</span></div>
+          <div class="category">Hotel · Center · €80/night</div>
+          <div class="quotes">“Wonderful stay.”<br>“Great location and comfort.”</div>
+        </div>
+      </div>
+    
+    </div>
+    
+
+    <!-- Χάρτης Google -->
+    <div class="map-fixed">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50310.60536916925!2d23.697139687557616!3d37.99083001421568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd1f067043f1%3A0x2736354576668ddd!2zzpHOuM6uzr3OsQ!5e0!3m2!1sel!2sgr!4v1747593573168!5m2!1sel!2sgr" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Κουμπί επιστροφής -->
+  <a href="#" class="back-to-top" id="backBtn" title="Go to top">↑</a>
+
+  <!-- footer -->
+  <footer>
+    &copy; 2025 Athens Tour Guide. All rights reserved.
+  </footer>
+
+  <!-- Script φίλτρου τιμής -->
+  <script src="js/script.js"></Script>
+  <Script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".filter-btn");
+      const stays = document.querySelectorAll(".stay");
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          stays.forEach(stay => {
+            const price = parseFloat(stay.getAttribute("data-price"));
+            if (
+              filter === "all" ||
+              (filter === "below" && price < 100) ||
+              (filter === "above" && price > 100)
+            ) {
+              stay.style.display = "flex";
+            } else {
+              stay.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <!-- Script για το κουμπί που σε πάει στη κορυφή-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const backBtn = document.getElementById("backBtn");
+      const filterBar = document.getElementById("filter-bar");
+
+      backBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const currentY = window.scrollY;
+        const targetY = filterBar.getBoundingClientRect().top + window.scrollY;
+
+        if (currentY > targetY + 50) {
+          window.scrollTo({ top: targetY - 100, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

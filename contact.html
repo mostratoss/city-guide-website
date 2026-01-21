@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Athens Tour</title>
+  <link rel="icon" type="image/png" href="icons/ath_logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact-style.css">
+  	<!-- Εισαγωγή της γραμματοσειράς Montserrat από Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-blur"></div>
+  <nav class="navbar">
+        <div class="logo">
+  <img src="icons/logo.png" alt="Logo" class="logo-img">
+  Athens Tour
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="stay.html">Where to Stay</a></li>
+      <li><a href="nightlife.html">Nightlife</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+  </nav>
+
+  <section class="contact-container fade-in">
+    <h2>Contact Us</h2>
+
+<form class="contact-form">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+
+  <div class="form-buttons">
+    <button type="submit" class="btn btn-primary">Send Message</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+  </div>
+</form>
+
+
+    <div class="social-icons">
+      <a href="#"><img src="icons/twitter.svg" alt="twitter-logo"></a>
+      <a href="#"><img src="icons/facebook.svg" alt="facebook-logo"></a>
+      <a href="#"><img src="icons/instagram.svg" alt="instagram-logo"></a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Athens Tour Guide. All rights reserved.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

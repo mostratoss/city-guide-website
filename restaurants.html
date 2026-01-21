@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurants in Athens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="icons/ath_logo.png">
+  <!-- General styles for layout and blur -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Page-specific styles for restaurants -->
+  <link rel="stylesheet" href="css/restaurants-style.css">
+	<!-- Εισαγωγή της γραμματοσειράς Montserrat από Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background blur layer -->
+  <div class="background-blur"></div>
+
+  <!-- Navigation bar -->
+  <nav class="navbar">
+        <div class="logo">
+  <img src="icons/logo.png" alt="Logo" class="logo-img">
+  Athens Tour
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurants.html" class="active">Restaurants</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="stay.html">Where to Stay</a></li>
+      <li><a href="nightlife.html">Nightlife</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+  </nav>
+
+  <!-- Full-height hero section with centered content and blur background -->
+  <header class="hero">
+    <div class="hero-box fade-in">
+      <div class="hero-content">
+        <h1>Top Restaurants in Athens</h1>
+        <p>Discover the best places to eat</p>
+        <!-- Scrolls to the restaurant list section -->
+        <a href="#restaurant-list" class="cta-button">Explore Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section for listing restaurants -->
+  <section class="container" id="restaurant-list">
+    <div class="restaurant-grid">
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/restaurant1.jpg" alt="Bakalogatos">
+        <div class="restaurant-info">
+          <h2>1. Bakalogatos</h2>
+          <div>
+            <span class="rating">5.0</span>
+            <a class="reviews" href="javascript:void(0);">(10814 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 International, Mediterranean · 20$ per person</div>
+          <div class="quotes">
+            “When it was time to eat, we were deservedly rewarded!”<br>
+            “Marvellous! Fantastic french cuisine...”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/indian.jpg" alt="Indian">
+        <div class="restaurant-info">
+          <h2>2. Hubbly_Habibi</h2>
+          <div>
+            <span class="rating">4.8</span>
+            <a class="reviews" href="javascript:void(0);">(5678 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Indian food, Mediterranean · 25$</div>
+          <div class="quotes">
+            “Really delicious food and really lovely staff.”<br>
+            “Marvellous! Fantastic Indian cuisine.”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/kalamakia.jpg" alt="kalamakia">
+        <div class="restaurant-info">
+          <h2>3. Nodas Grilled Food</h2>
+          <div>
+            <span class="rating">4.8</span>
+            <a class="reviews" href="javascript:void(0);">(8754 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Greek Grilled food, Mediterranean · 10$</div>
+          <div class="quotes">
+            “Best dinner for two!”<br>
+            “Delicious Greek cuisine in the most atmospheric restaurant!”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/italian.jpg" alt="Italian">
+        <div class="restaurant-info">
+          <h2>4. Alfredo Pasta</h2>
+          <div>
+            <span class="rating">4.6</span>
+            <a class="reviews" href="javascript:void(0);">(3450 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Italian food, Mediterranean · 25$</div>
+          <div class="quotes">
+            “The food here was absolutely amazing!”<br>
+            “We got multiple pasta dishes!”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/restaurant2.jpg" alt="Greek Tavern">
+        <div class="restaurant-info">
+          <h2>5. Zorba’s Grill</h2>
+          <div>
+            <span class="rating">4.8</span>
+            <a class="reviews" href="javascript:void(0);">(4243 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Greek, Mediterranean · $$</div>
+          <div class="quotes">
+            “Authentic Greek flavors in every bite.”<br>
+            “The moussaka and souvlaki were perfect!”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/chin_restaurant.jpg" alt="Sushi Spot">
+        <div class="restaurant-info">
+          <h2>6. Sushi Zen</h2>
+          <div>
+            <span class="rating">4.9</span>
+            <a class="reviews" href="javascript:void(0);">(6103 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Japanese, Sushi · $$$</div>
+          <div class="quotes">
+            “Fresh and beautifully presented.”<br>
+            “Best sushi I’ve had outside of Japan.”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/aeriko.jpg" alt="Mediterranean">
+        <div class="restaurant-info">
+          <h2>7. Mushroom House</h2>
+          <div>
+            <span class="rating">4.5</span>
+            <a class="reviews" href="javascript:void(0);">(8743 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Mediterranean Cuisine · $$</div>
+          <div class="quotes">
+            “Rich in flavor and spices!”<br>
+            “The butter chicken with mushrooms is out of this world.”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/burger.jpg" alt="Burger House">
+        <div class="restaurant-info">
+          <h2>8. Burger Haven</h2>
+          <div>
+            <span class="rating">4.9</span>
+            <a class="reviews" href="javascript:void(0);">(12043 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 American, Fast Food · $</div>
+          <div class="quotes">
+            “Juicy burgers and crispy fries!”<br>
+            “Great value and fast service.”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/bokos.jpg" alt="Traditional Greek">
+        <div class="restaurant-info">
+          <h2>9. Taverna Ellas</h2>
+          <div>
+            <span class="rating">4.7</span>
+            <a class="reviews" href="javascript:void(0);">(6590 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Traditional Greek Cuisine · $$</div>
+          <div class="quotes">
+            “A true taste of Greece!”<br>
+            “The lamb kleftiko and village salad were unforgettable.”
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <img src="photos_for_restaurant/galanos.jpg" alt="Seafood Delight">
+        <div class="restaurant-info">
+          <h2>10. Thalassa Mare</h2>
+          <div>
+            <span class="rating">4.9</span>
+            <a class="reviews" href="javascript:void(0);">(4930 reviews)</a>
+            <span class="open-status">• Open now</span>
+          </div>
+          <div class="category">🍴 Seafood, Mediterranean · $$$</div>
+          <div class="quotes">
+            “The grilled octopus was melt-in-your-mouth delicious!”<br>
+            “Perfect seaside vibe with fresh daily catch.”
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Back to Top Button for user convenience -->
+  <a href="#restaurant-list" class="back-to-top" title="Go to top">↑</a>
+
+  <!-- Footer with copyright -->
+  <footer>
+    &copy; 2025 Athens Tour Guide. All rights reserved.
+  </footer>
+  <script src="js/script.js"> </script>
+  <script>
+  const bg = document.querySelector('.background-blur');
+  const section = document.querySelector('#restaurant-list');
+// Απενεργοποιούμε το animation blurIn μόλις φορτωθεί η σελίδα
+bg.style.animation = "none";
+  // Παρακολουθούμε πότε εμφανίζεται ή εξαφανίζεται το section στη σελίδα
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Όταν το section είναι ορατό: ορίζουμε νυχτερινή εικόνα
+        bg.style.backgroundImage = "url('images/restaurant_background.jpg')";
+		bg.style.filter = "blur(1px)"; // λιγότερο θόλωμα
+      } else {
+        // Όταν το section δεν είναι ορατό: επαναφορά στην αρχική εικόνα
+        bg.style.backgroundImage = "url('images/acropolis.jpg')";
+		bg.style.filter = "blur(6px)"; // ξανά έντονο blur
+      }
+    });
+  }, {
+    threshold: 0.2 // Ενεργοποιείται όταν το 20% του section είναι ορατό
+  });
+
+  observer.observe(section); // Ενεργοποιούμε την παρακολούθηση
+</script>
+</body>
+</html>

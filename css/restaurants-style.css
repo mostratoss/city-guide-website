@@ -1,0 +1,265 @@
+
+/* === Διάταξη grid για τις κάρτες εστιατορίων === */
+.restaurant-grid {
+  display: grid; /* χρησιμοποιούμε grid για responsive εμφάνιση */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 2 στήλες εάν χωράνε */
+  justify-content: center; /* κεντράρισμα περιεχομένου */
+  gap: 30px; /* απόσταση μεταξύ καρτών */
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto; /* κέντρο σελίδας */
+}
+
+/* === Στυλ για κάθε κάρτα εστιατορίου === */
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.55); /* ημιδιαφανές μαύρο */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  backdrop-filter: blur(4px); /* "glass" effect */
+  color: #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+.restaurant img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* διατηρεί αναλογίες εικόνας */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.restaurant-info {
+  padding: 15px;
+  flex: 1;
+}
+
+.restaurant-info h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.rating {
+  color: #6fcf97; /* πράσινο για θετικές αξιολογήσεις */
+  font-weight: bold;
+}
+
+.reviews {
+  color: #00bcd4; /* μπλε για εμφανίσεις links */
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.category {
+  color: #cccccc;
+  margin: 8px 0;
+}
+
+.quotes {
+  font-style: italic;
+  color: #dddddd;
+  margin-top: 10px;
+}
+
+.open-status {
+  color: #8fff8f; /* φωτεινό πράσινο */
+  font-size: 0.9em;
+}
+
+/* === Ενότητα hero === */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: none;
+  color: #ffffff;
+}
+
+/* === Κουμπί explore === */
+.cta-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #005fa3;
+}
+
+/* === Κεντρικό container της σελίδας === */
+.container {
+  background: transparent;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* === Smooth scroll στο anchor === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Εφέ fade-in === */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Πλαίσιο γύρω από την εισαγωγή (hero box) === */
+.hero-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 80px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+/* === Για να μην "χάνεται" το anchor από το navbar === */
+#restaurant-list {
+  scroll-margin-top: 100px;
+}
+
+/* === Κουμπί επιστροφής στην κορυφή === */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0077cc;
+  color: white;
+  font-size: 24px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.back-to-top:hover {
+  background-color: #005fa3;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* === Responsive προσαρμογές για μικρές οθόνες === */
+@media (max-width: 600px) {
+  .hero-box {
+    padding: 40px 20px;
+    max-width: 90%;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .restaurant {
+    border-radius: 12px;
+  }
+
+  .restaurant-info h2 {
+    font-size: 16px;
+  }
+
+  .quotes {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+  }
+}
+
+.main-footer {
+  background-color: #0d3b66; /* Σκούρο μπλε για επαγγελματική εμφάνιση */
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Για responsiveness */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: #00bcd4; /* Γαλάζιο hover effect */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff33; /* Απαλό λευκό για διαχωριστική γραμμή */
+  margin-top: 30px;
+  font-size: 14px;
+}

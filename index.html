@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Athens Tour Guide | Explore the City</title>
+  <link rel="icon" href="icons/ath_logo.png" type="image/png" >
+  <link rel="stylesheet" href="css/style.css" >
+  <link rel="stylesheet" href="css/restaurants-style.css" >
+  <link rel="stylesheet" href="css/index-style.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-blur"></div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="icons/logo.png" alt="Athens Tour Logo" class="logo-img" >
+      Athens Tour
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="stay.html">Where to Stay</a></li>
+      <li><a href="nightlife.html">Nightlife</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-box fade-in">
+      <div class="hero-content">
+        <h1>Welcome to Athens</h1>
+        <p>Welcome to Athens Tour Guide, your ultimate companion to discovering the rich culture, history, cuisine, and lifestyle of the Greek capital. Whether you're a first-time visitor or a returning explorer, this platform is designed to help you navigate and enjoy Athens to the fullest. Dive into curated suggestions, hand-picked locations, and trusted recommendations from locals and travelers alike. Let us guide you through the marvels of ancient heritage and the energy of modern urban life — all in one place.</p>
+        <a href="#sections" class="cta-button">Explore Now</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="container" id="sections">
+    <div class="cards">
+      <a href="restaurants.html" class="card card-link fade-in">
+        <img src="photos_for_index/restaurants.jpg" alt="Restaurants">
+        <h2>Restaurants</h2>
+        <p>Embark on a flavorful journey through Athens' dynamic food scene. From traditional Greek tavernas serving moussaka and souvlaki, to award-winning fine dining spots, you'll find something delicious at every corner. This section provides reviews, locations, and highlights to satisfy every palate.</p>
+      </a>
+      <a href="attractions.html" class="card card-link fade-in">
+        <img src="photos_for_index/attractions.jpg" alt="Attractions">
+        <h2>Attractions</h2>
+        <p>Marvel at the ancient wonders like the Acropolis and Temple of Olympian Zeus, or explore modern architectural gems and museums. Discover Athens' rich heritage, vibrant neighborhoods, and breathtaking viewpoints with in-depth guides and visitor tips.</p>
+      </a>
+      <a href="stay.html" class="card card-link fade-in">
+        <img src="photos_for_index/stay.jpg" alt="Where to Stay">
+        <h2>Where to Stay</h2>
+        <p>Whether you're looking for luxury hotels with Acropolis views, boutique apartments in Plaka, or budget-friendly hostels near the metro, our accommodation guide helps you find your perfect stay. Filter by neighborhood, budget, or style.</p>
+      </a>
+      <a href="nightlife.html" class="card card-link fade-in">
+        <img src="photos_for_index/nightlife.jpg" alt="Nightlife">
+        <h2>Nightlife</h2>
+        <p>Athens after dark is full of surprises. Discover rooftop cocktail bars with stunning views, underground clubs with electronic beats, traditional bouzoukia stages, and cozy jazz spots. This section unveils the city's buzzing nocturnal identity.</p>
+      </a>
+      <a href="contact.html" class="card card-link fade-in">
+        <img src="photos_for_index/contact.jpg" alt="Contact">
+        <h2>Contact With Us</h2>
+        <p>We'd love to hear from you! Whether you have a question, a suggestion, or want to collaborate, feel free to get in touch. Our contact page includes all the ways you can reach out to the Athens Tour Guide team directly.</p>
+      </a>
+    </div>
+  </section>
+
+  <a href="#sections" class="back-to-top" title="Go to top">↑</a>
+
+  <footer>
+    &copy; 2025 Athens Tour Guide. All rights reserved.
+    <br>
+    <a href="javascript:void(0);" class="footer-link">Πολιτική Απορρήτου</a>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+  const bg = document.querySelector('.background-blur');
+  const images = [
+    'images/slide1.jpg',
+    'images/slide2.jpg',
+    'images/slide3.jpg',
+    'images/slide4.jpg',
+  ];
+  let i = 0;
+
+  setInterval(() => {
+    i = (i + 1) % images.length;
+    bg.style.backgroundImage = `url('${images[i]}')`;
+  }, 4000); 
+</script>
+</body>
+</html>

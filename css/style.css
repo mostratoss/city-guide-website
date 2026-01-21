@@ -1,0 +1,364 @@
+
+/* === Επαναφορά βασικών στυλ === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Γενικές ρυθμίσεις για το σώμα της σελίδας === */
+body {
+  background-image: url('../images/acropolis.jpg'); /* φόντο εικόνας */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;     
+  min-height: 100vh; /* για να κρατάει footer στο κάτω μέρος */
+}
+
+/* === Πλοήγηση - Navbar (βελτιωμένη και επαγγελματική) === */
+
+/* === Πλοήγηση - Glassmorphic Μαύρη Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55); /* ημιδιαφανές μαύρο */
+  backdrop-filter: blur(10px); /* εφέ θόλωσης πίσω από τη navbar */
+  padding: 14px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* λεπτό περίγραμμα για γυαλάδα */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* σκιά για βάθος */
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.logo {
+  color: var(--white);
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+  backdrop-filter: blur(8px);
+  border-radius: 6px;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.15); /* ημιδιαφανές λευκό */
+  color: white; /* παραμένει λευκό */
+  backdrop-filter: blur(8px); /* θολό εφέ */
+ 
+  border: 1px solid rgba(255, 255, 255, 0.2); /* διακριτικό περίγραμμα */
+  transform: none;
+  box-shadow: none;
+}
+
+/* === Στυλ για το ενεργό link στο navbar === */
+.nav-links li a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* === Ενότητα εισαγωγής (hero) === */
+.hero {
+  padding: 40px 20px;
+  background-color: var(--background-light);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: none;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--hover-color);
+}
+
+/* === Κεντρική διάταξη περιεχομένου === */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: linear-gradient(to bottom, var(--white) 0%, #f3f7fb 100%);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.card span {
+  font-size: 2.5em;
+}
+
+/* === Υποσέλιδο === */
+footer {
+  width: 100vw; /* πιάνει όλη την οθόνη */
+  background: rgba(0, 0, 0, 0.5); /* μαύρο με διαφάνεια */
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+  padding: 24px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.95em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  left: 0;
+}
+
+.footer-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* === Responsive σχεδίαση για κινητά === */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2em;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #000000; /* μαύρο φόντο για το μενού */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 220px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* === Εφέ φόντου με θόλωμα === */
+.background-blur {
+  position: fixed;
+  inset: 0;
+  background-image: url('../images/acropolis.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  filter: blur(0px);
+  animation: blurIn 1.5s ease-in-out forwards;
+  pointer-events: none;
+  transition: background-image 1s ease-in-out, filter 1s ease-in-out;
+}
+
+@keyframes blurIn {
+  0% { filter: blur(0px); }
+  100% { filter: blur(6px); }
+}
+
+/* Όλο το περιεχόμενο να εμφανίζεται πάνω από το blur */
+nav,
+footer,
+.main-content,
+.container,
+.hero,
+.section,
+.contact-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Εφέ εμφάνισης fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+#nightlife-list {
+  scroll-margin-top: 100px; /* αφήνει περιθώριο κάτω από το navbar */
+}
+
+#attraction-list {
+  scroll-margin-top: 100px; /* αφήνει περιθώριο κάτω από το navbar */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* απόσταση ανάμεσα στο logo και το κείμενο */
+  color: var(--white);
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo-img {
+  height: 36px; 
+  width: auto;
+  border-radius: 6px; 
+}
+
+
+.hero-box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-heading {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 auto 48px auto;
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  line-height: 1.6;
+}
